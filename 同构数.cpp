@@ -1,0 +1,51 @@
+#include<stdio.h>              //同构数：  同构数是指这样一个正整数，它出现在它的平方数的右边。
+#include<math.h>               // 例： 5*5=25  6*6=36  25*25=625
+int main()                     
+{
+	long long int i,sum,s1=0,s2=0,s3=0,s4=0,s5=0;
+	for(i=1;i<=99999;i++)
+	{
+	if(0<=i&&i<=9)
+	{
+		if(i==(i*i)%10)
+		{
+		s1=s1+1;
+		printf("%d*%d=%d\n",i,i,i*i);
+	    }
+	 } 
+	 if(10<=i&&i<=99)
+	 {
+	 	if(i==(i*i)%100)
+	 	{
+	 	s2=s2+1;
+	 	printf("%d*%d=%d\n",i,i,i*i);
+	    }
+	 }
+	 if(100<=i&&i<=999)
+	 {
+	 	if(i==(i*i)%1000)
+	 	{
+	 	s3=s3+1;
+	 	printf("%d*%d=%d\n",i,i,i*i);
+	    }
+	 }
+	 if(1000<=i&&i<=9999)
+	 {
+	 	if(i==(i*i)%10000)
+	 	{
+	 		s4=s4+1;
+	 	printf("%d*%d=%d\n",i,i,i*i);
+	    }
+	 }
+	 if(10000<=i&&i<=99999)
+	 {
+	 	if(i==(i*i)%100000)
+	 	{
+	 	s5=s5+1;
+	 	printf("%d*%d=%d\n",i,i,i*i);
+	    }
+	 }
+}
+sum=s1+s2+s3+s4+s5;
+printf("sum=%d\n",sum);
+}
