@@ -1,0 +1,53 @@
+#include<stdio.h>
+int main()
+{
+	int x,y,z,min,middle,max;
+	printf("请输入x，y，z（比较大小）：");
+	scanf("%d%d%d",&x,&y,&z);
+	if(x>y&&x>z)
+	{
+		max=x;
+		if(y<z)
+		{
+			min=y;
+			middle=z;
+		}
+		if(y>z)
+	 	{
+			min=z;
+			middle=y;
+	    }
+			
+		printf("max=%d,middle=%d,min=%d\n",max,middle,min);
+	 } 
+	 if(y>x&&y>z)
+	 {
+	 	max=y;
+	 	if(x>z)
+	 	{
+	 		min=z;
+	 		middle=x;
+		}
+		if(x<z)
+		{
+			min=x;
+			middle=z;
+		}
+		printf("max=%d,middle=%d,min=%d\n",max,middle,min);
+	 }
+	 if(z>x&&z>y)
+	 {
+	 	max=z;
+	 	if(x>y)
+	 	{
+	 		min=y;
+	 		middle=x;
+		}
+		if(x<y)
+		{
+			min=x;
+			middle=y;
+		}
+		printf("max=%d,middle=%d,min=%d\n",max,middle,min);
+	 }
+} 
